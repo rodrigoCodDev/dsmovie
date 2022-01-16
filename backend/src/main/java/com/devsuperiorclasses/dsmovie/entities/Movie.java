@@ -24,8 +24,10 @@ public class Movie {
     private Integer count;
     private String image;
 
+    // Um filme possui muitas avaliações
     @OneToMany(mappedBy = "id.movie")
     private Set<Score> scores = new HashSet();
+    // Referência para todos os scores do filme
 
     public Movie() {
 
